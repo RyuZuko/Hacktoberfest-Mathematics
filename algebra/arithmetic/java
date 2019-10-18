@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class arithmetic{
+public static void main(String[]args){
+Scanner read = new Scanner(System.in);
+
+double num1, num2;
+String operation, dec;
+
+System.out.println("Please enter the first number");
+num1=read.nextDouble();
+System.out.println("Please enter the second number");
+num2=read.nextDouble();
+
+System.out.println("What do you want to do with the two numbers ?");
+System.out.println("add, substract, multiply or divide");
+operation = read.next();
+
+if(operation=="add")
+  ans = num1+num2;
+ else if (operation="subtract"){
+   System.out.println("First number subtract second number ? yes or no");
+    dec = read.next();
+      if (dec=="yes")
+        ans = num1-num2;
+       else
+        ans = num2-num1;
+   }
+   else if (operation=="multiply")
+        ans = num1*num2;
+   else if (operation == "divide")
+   {
+        System.out.println("First number divide second number ? yes or no");
+        dec = read.next();
+       if (dec=="yes")
+          ans = num1/num2;
+       else
+          ans = num2/num1;
+   }
+   System.out.println("The answer is: "+ans);
+   
+   }
+   }
